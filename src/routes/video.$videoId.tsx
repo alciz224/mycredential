@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { Clock, Eye, Lock, Loader2, X } from 'lucide-react'
+import { Clock, Eye, Loader2, X } from 'lucide-react'
 
 import { fetchVideo, authenticateUser } from '../server/function'
 import { VideoPlayer } from '../components/VideoPlayer'
@@ -13,7 +13,7 @@ export const Route = createFileRoute('/video/$videoId')({
     const video = await fetchVideo({ data: params.videoId })
     return video;
   },
-  component: VideoDetailPage,
+  component: VideoDetailPage
 })
 
 function VideoDetailPage() {
